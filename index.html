@@ -1,0 +1,436 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Menlo;
+	panose-1:2 11 6 9 3 8 4 2 2 4;}
+@font-face
+	{font-family:"\@PMingLiU";
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=en-TW style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:16.0pt;line-height:115%;font-family:"Times New Roman",serif'>Exploring
+Titanic Dataset with Pandas</span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Times New Roman",serif'>1.
+Import the Required Libraries</span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>You should
+import Pandas (import pandas as pd) and Matplotlib (import matplotlib.pyplot as
+plt) for data manipulation and visualization.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;line-height:13.5pt;background:white'><span
+style='font-size:9.0pt;font-family:Menlo;color:#0D0D0D;background:yellow'>import
+pandas as pd</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;line-height:13.5pt;background:white'><span
+style='font-size:9.0pt;font-family:Menlo;color:#0D0D0D;background:yellow'>import
+matplotlib.pyplot as plt</span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif;
+color:#0D0D0D'>Explanation</span></i><span lang=EN-US style='font-family:"Times New Roman",serif;
+color:#0D0D0D'>: stands for import needed libraries for data manipulation and visualization</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif;
+color:#0D0D0D'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Times New Roman",serif'>2. Load
+the Dataset</span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Load the
+Titanic dataset from a CSV file named 'titanic.csv' into a Pandas DataFrame.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;line-height:13.5pt;background:white'><span
+style='font-size:9.0pt;font-family:Menlo;color:#3B3B3B;background:yellow'>df =
+pd.read_csv(&quot;/Users/baiweile/Downloads/titanic 1.csv&quot;)</span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation:
+</span></i><span lang=EN-US style='font-family:"Times New Roman",serif'>stands
+for reading a csv file<i> </i></span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></i></p>
+
+<p class=MsoNormal><b><span style='font-family:"Times New Roman",serif'>3. Data
+Exploration</span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Display
+the first few rows of the dataset to understand its structure.</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>print(df.head())</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'><img
+width=606 height=143 id="Picture 11" src="index.fld/image001.jpg"
+alt="A computer screen with white text&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation</span></i><span
+lang=EN-US style='font-family:"Times New Roman",serif'>: stands for print first
+5 rows.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Print
+information about the columns and their data types.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;line-height:115%;
+font-family:Menlo;background:yellow'>print(df.info())</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'><img
+width=654 height=297 id="Picture 10" src="index.fld/image002.jpg"
+alt="A screen shot of a computer&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation</span></i><span
+lang=EN-US style='font-family:"Times New Roman",serif'>: stands for showing
+information about total amount of columns (12) and their types: float, int or object.
+Non-Null count stands for non missed values in data set. </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Show
+summary statistics for numerical columns (e.g., mean, min, max, etc.).</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>print(df.describe())</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'><img
+width=689 height=178 id="Picture 9" src="index.fld/image003.jpg"
+alt="A screenshot of a computer screen&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation</span></i><span
+lang=EN-US style='font-family:"Times New Roman",serif'>: Showing the count of
+each column with its values. Count stands for fulfilled values in data set,
+mean means average value of each column, std means standard deviation, min stands
+for minimum value in each column, 25-50-75% stands for values below which 25,
+50 or 75 percent of data falls, max stands for maximum value in each column. </span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Times New Roman",serif'>4. Data
+Cleaning</span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Identify
+and handle missing values in the dataset (e.g., fill missing age values with
+median).</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>print(df.isnull().sum())</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'><img
+width=692 height=202 id="Picture 8" src="index.fld/image004.jpg"
+alt="A computer screen with white text&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation:
+</span></i><span lang=EN-US style='font-family:"Times New Roman",serif'>We can
+see all columns where have missing values (Age, Cabin, Embarked), now we need to
+and analyze which data makes sense for analysis and should be filled in and
+which can be dropped. </span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>df2 = df.copy()</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>median_age = df2[&quot;Age&quot;].median()</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>df2[&quot;Age&quot;] =
+df2[&quot;Age&quot;].fillna(median_age)</span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation:
+</span></i><span lang=EN-US style='font-family:"Times New Roman",serif'>As long
+as age is an important and valuable data and it is represented in numbers we
+can<i> </i>fill it with average age value. </span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>avarage_embarked = df2[&quot;Embarked&quot;].mode()[0]</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>df2[&quot;Embarked&quot;] =
+df2[&quot;Embarked&quot;].fillna(avarage_embarked)</span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation:
+</span></i><span lang=EN-US style='font-family:"Times New Roman",serif'>Embarked
+column has only 2 missing values, this column stands for port where people went
+onboard. We can replace this two data with most common values. </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;line-height:115%;
+font-family:Menlo;background:yellow'>print(df2.isnull().sum())</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;line-height:115%;
+font-family:Menlo'><img width=709 height=195 id="Picture 7"
+src="index.fld/image005.jpg"
+alt="A screen shot of a computer&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation:
+</span></i><span lang=EN-US style='font-family:"Times New Roman",serif'>We can
+see changes in missing values, cause values in “Age” and “Embarked” column were
+filled. </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Perform
+any necessary data transformations or cleaning steps.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;line-height:115%;
+font-family:Menlo;background:yellow'>d</span><span style='font-size:9.0pt;
+line-height:115%;font-family:Menlo;background:yellow'>f</span><span lang=EN-US
+style='font-size:9.0pt;line-height:115%;font-family:Menlo;background:yellow'>3</span><span
+style='font-size:9.0pt;line-height:115%;font-family:Menlo;background:yellow'> =
+</span><span lang=EN-US style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>df2.copy</span><span style='font-size:9.0pt;
+line-height:115%;font-family:Menlo;background:yellow'>()</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>df</span><span lang=EN-US style='font-size:9.0pt;
+line-height:115%;font-family:Menlo;background:yellow'>3</span><span
+style='font-size:9.0pt;line-height:115%;font-family:Menlo;background:yellow'> =
+df</span><span lang=EN-US style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>3</span><span style='font-size:9.0pt;line-height:115%;
+font-family:Menlo;background:yellow'>.dropna()</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>print(df</span><span lang=EN-US style='font-size:9.0pt;
+line-height:115%;font-family:Menlo;background:yellow'>3.head(10)</span><span
+style='font-size:9.0pt;line-height:115%;font-family:Menlo;background:yellow'>)</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;line-height:115%;
+font-family:Menlo;background:yellow'>print(df3.tail(10))</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;line-height:115%;
+font-family:Menlo'><img width=682 height=384 id="Picture 6"
+src="index.fld/image006.jpg"
+alt="A screenshot of a computer&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;line-height:115%;
+font-family:Menlo'>&nbsp;</span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation:
+</span></i><span lang=EN-US style='font-family:"Times New Roman",serif'>Some missing
+values were handled before (“Age” and “Embarked”), but column “Cabin” had 687
+missed values in total 891 rows, which is too much. To drop those rows makes analysis
+of data easier and more accurate, rather than to fulfil missed values. Screenshot
+demonstrates first and last 10 rows data set and shows that NaN values in “Cabin”
+column were dropped. </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Times New Roman",serif'>5. Data
+Analysis</span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Calculate
+and display the count of passengers by gender.</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>df[[&quot;Sex&quot;,&quot;PassengerId&quot;]].groupby([&quot;Sex&quot;]).count()</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'><img
+width=679 height=73 id="Picture 5" src="index.fld/image007.jpg"></span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation:</span></i><span
+lang=EN-US> </span><span lang=EN-US style='font-family:"Times New Roman",serif'>This
+tells the computer to look at the “Sex” and “PassengerId” columns, to put them
+into groups based on whether a person is male or female, and in the end to
+count how many people are in each group.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Compute
+the average age of passengers.</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>avarage_age = df</span><span lang=EN-US
+style='font-size:9.0pt;line-height:115%;font-family:Menlo;background:yellow'>3</span><span
+style='font-size:9.0pt;line-height:115%;font-family:Menlo;background:yellow'>[&quot;Age&quot;].mean()</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>print(avarage_age</span><span lang=EN-US
+style='font-size:9.0pt;line-height:115%;font-family:Menlo;background:yellow'>)</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'><img
+width=453 height=65 id="Picture 4" src="index.fld/image008.jpg"
+alt="A black background with white text&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-family:"Times New Roman",serif'>Explanation:</span></i><span
+lang=EN-US> </span><span lang=EN-US style='font-family:"Times New Roman",serif'>Using
+column with data about age we have used “mean” calculates the average nu,ber of
+the values in the selected series. Average age is 35. </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Determine
+the survival rate by passenger class.</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>survival_rate = df[[&quot;Pclass&quot;,
+&quot;Survived&quot;]].groupby([&quot;Pclass&quot;]).mean()</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>print(survival_rate)</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'><img
+width=455 height=117 id="Picture 3" src="index.fld/image009.jpg"
+alt="A screen shot of a computer&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Times New Roman",serif'>6. Data
+Visualization</span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Create a
+bar chart to visualize the survival rate by passenger class.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>Add appropriate
+labels and a title to the chart.</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>survival_rate.plot.bar()</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>plt.title(&quot;Survival Rate by Passanger Class
+&quot;) </span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>plt.xlabel(&quot;Passanger class&quot;)</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>plt.ylabel(&quot;Survival rate&quot;)</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:115%;font-family:
+Menlo;background:yellow'>plt.show()</span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Times New Roman",serif'><img
+width=430 height=331 id="Picture 2" src="index.fld/image010.jpg"
+alt="A graph of a number of people&#10;&#10;Description automatically generated"></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Times New Roman",serif'>7.
+Conclusion</span></b></p>
+
+<p class=MsoNormal><u><span style='font-family:"Times New Roman",serif'>Summarize
+your findings or insights gained from analyzing the Titanic dataset.</span></u></p>
+
+<p class=MsoNormal style='text-indent:21.3pt'><span lang=EN-US
+style='font-family:"Times New Roman",serif'>Provided data set helped to
+investigate some statistic due Titanic ship crush. After preparation and
+cleaning data it is possible to make few conclusions: </span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Times New Roman",serif'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-family:"Times New Roman",serif'>An average age of
+Titanic passenger not depending from gender was 35 years</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Times New Roman",serif'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-family:"Times New Roman",serif'>The amount of male
+passengers was leading: 577, when female total count was 314</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span lang=EN-US
+style='font-family:"Times New Roman",serif'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-family:"Times New Roman",serif'>A
+ratio of passenger’ class to the probability of survival showed a linear
+relationship, which illustrated in chart bar. The highest rate of survival
+belongs to passengers of 1-st class, when the lowest to passengers of 3-rd.</span></p>
+
+<p class=MsoNormal><u><span style='font-family:"Times New Roman",serif'>Reflect
+on the importance of data cleaning and exploration in data analysis.</span></u></p>
+
+<p class=MsoNormal style='text-indent:14.2pt'><span lang=EN-US
+style='font-family:"Times New Roman",serif'>Cleaning and exploration of data in
+data analysis firstly stands for accuracy of investigation. Cleaning data
+process helps to search for missing values, errors in data sets (for example if
+in one column we have data represented in floats, integers, and strings values
+all together), those mistakes make</span><span lang=EN-US style='font-family:
+"Times New Roman",serif'> </span><span lang=EN-US style='font-family:"Times New Roman",serif'>data
+analysis unrealistic, their identification helps to make more objective result,
+due to most realistic condition of things. Good cleaned and organized data is more
+convenient for next usage, especially if it should be used by another person or
+as part of any kind of report. By exploring the data analysts can identify
+trends, relationships, depressions, or anomalies based on past data and build
+predictions for future events, which helps to take strategical decisions.</span></p>
+
+</div>
+
+</body>
+
+</html>
